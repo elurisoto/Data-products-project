@@ -35,8 +35,9 @@ loadData <- function(){
 	data <- sapply(data, transform)
 	rownames(data) <- countries
 	data <- as.data.frame(t(data))
+	data$Average <- apply(data,1,function(x) mean(x,na.rm=TRUE))
 	data$year <- 1980:2013
-	
+
 	data
 }
 
