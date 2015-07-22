@@ -14,6 +14,7 @@ shinyUI(pageWithSidebar(
 	
 	mainPanel(
 		h3('Investment over the years'),
+		p('Hover the graph to see details.'),
 		showOutput("myChart", lib = "morris")
 	)
 	
